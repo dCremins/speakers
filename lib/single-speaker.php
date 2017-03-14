@@ -3,22 +3,35 @@
  Template Name: Single Keynote Speaker
  Template Post Type: speaker
  */
+    ?>
+
+ <header class="container">
+   <h1>Keynote Speakers</h1>
+ </header>
+
+<?php
 while (have_posts()) :
             the_post();
         ?>
-       <article <?php post_class(); ?>>
+       <article <?php post_class('container'); ?>>
         <?php
         $session = get_field('session');
+        $image = get_field('image');
+        $date = get_field('date', $session);
+        $eventdate = date("l, M jS", strtotime($date));
         ?>
-         <header>
-          <h1 class="entry-title"> <?php the_title(); ?></h1>
-          <h2><?php echo var_dump($session); ?></h2>
-        </header>
         <div class="row">
+          <div class="speaker-image col-5">
+            <img src="<?php echo $image['url']; ?>" alt="<?php the_field('title'); ?>">
+          </div>
           <div class="entry-content col">
-            <?php
-
-            ?>
+            <header class="speakers">
+             <h2 class="entry-title"> <?php the_title(); ?></h2>
+             <h3><?php echo $eventdate . ' ' . get_the_title($session); ?></h3>
+             <h4> <?php the_field('title'); ?></h4>
+             <p> <a href="<?php the_field('title'); ?>">View Website</a></p>
+           </header>
+            <?php the_content(); ?>
           </div>
         </div>
 
