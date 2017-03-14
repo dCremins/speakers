@@ -15,9 +15,9 @@ while (have_posts()) :
         ?>
        <article <?php post_class('container'); ?>>
         <?php
-        $session = get_field('session');
+        $session = get_field('session_title');
         $image = get_field('image');
-        $date = get_field('date', $session);
+        $date = get_field('session');
         $eventdate = date("l, M jS", strtotime($date));
         ?>
         <div class="row">
@@ -27,7 +27,7 @@ while (have_posts()) :
           <div class="entry-content col">
             <header class="speakers">
              <h2 class="entry-title"> <?php the_title(); ?></h2>
-             <h3><?php echo $eventdate . ' ' . get_the_title($session); ?></h3>
+             <h3><?php echo $eventdate . ' ' . $session; ?></h3>
              <h4> <?php the_field('title'); ?></h4>
              <p> <a href="<?php the_field('title'); ?>">View Website</a></p>
            </header>
@@ -37,8 +37,8 @@ while (have_posts()) :
 
         <footer>
           <nav class="post-nav row">
-            <div class="previous col"><?php previous_post_link('%link', '<i class="fa fa-arrow-left" aria-hidden="true"></i> Previous'); ?></div>
-            <div class="next col"><?php next_post_link('%link', 'Next <i class="fa fa-arrow-right" aria-hidden="true"></i>'); ?></div>
+            <div class="previous col"><?php previous_post_link('%link', '<i class="fa fa-arrow-left" aria-hidden="true"></i> Previous Speaker'); ?></div>
+            <div class="next col"><?php next_post_link('%link', 'Next Speaker <i class="fa fa-arrow-right" aria-hidden="true"></i>'); ?></div>
           </nav>
         </footer>
        </article>

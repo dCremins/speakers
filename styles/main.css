@@ -1,5 +1,5 @@
 .speaker-image {
-  margin-top: 15px;
+  width: 16.6666666667%;
 }
 
 .speaker-image img {
@@ -13,4 +13,42 @@
 .speakers h3,
 .speakers h4 {
   margin-bottom: 10px;
+}
+
+.type-speaker {
+  margin-bottom: 20px;
+}
+
+.type-speaker .speaker-image {
+  border-radius: 100px;
+  height: 200px;
+  margin: 8px 15px;
+  overflow: hidden;
+  padding: 0;
+  width: 200px;
+}
+
+.speaker-link {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+.speaker-link:hover {
+  cursor: pointer;
+}
+
+.speaker-link:hover ~ .speaker-image img {
+  opacity: .5;
+}
+
+.speaker-link:hover ~ .speakers h2,
+.speaker-link:hover ~ .speakers h3,
+.speaker-link:hover ~ .speakers h4 {
+  text-decoration: underline;
+}
+
+.speakers {
+  align-self: center;
 }
