@@ -35,7 +35,7 @@
                   <div class="speaker-link">
                       <a href="<?php the_permalink(); ?>"></a>
                   </div>
-                    <div class="speaker-image">
+                    <div class="archive-speaker-image">
                         <img src="<?php echo $image['url']; ?>" alt="<?php the_field('title'); ?>">
                     </div>
                     <div class="entry-content col speakers">

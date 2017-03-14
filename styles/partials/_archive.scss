@@ -1,7 +1,7 @@
 .type-speaker {
   margin-bottom: 20px;
 
-  .speaker-image {
+  .archive-speaker-image {
     border-radius: 100px;
     height: 200px;
     margin: 8px 15px;
@@ -11,7 +11,8 @@
   }
 }
 
-.speaker-link {
+.speaker-link,
+.speaker-link a {
   height: 100%;
   position: absolute;
   width: 100%;
@@ -20,7 +21,8 @@
   &:hover {
     cursor: pointer;
 
-    ~ .speaker-image img {
+    ~ .archive-speaker-image {
+      border-radius: 100px;
       opacity: .5;
     }
 

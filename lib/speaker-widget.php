@@ -19,8 +19,8 @@ class SpeakerWidget extends \WP_Widget
     public function form($instance)
     {
 // Backend Form
-        $title = (isset($instance['title'])) ? $instance['title'] : 'New Title';
-        $link = (isset($instance['link'])) ? $instance['link'] : '/speakers'; ?>
+        $title = (isset($instance['title'])) ? $instance['title'] : 'Speakers';
+        $link = (isset($instance['link'])) ? $instance['link'] : '/speaker'; ?>
         <p>
           <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:'); ?></label>
           <input class="widefat" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" />
@@ -50,14 +50,20 @@ class SpeakerWidget extends \WP_Widget
 // before and after widget arguments are defined by themes
         echo $args['before_widget'];
         if (!empty($title)) {
+            if (!empty($link)) {
+                echo '<a href="' . $link . '">';
+            }
             if (is_front_page()) {
                 echo '<h4 class="homepage">' . $title . '</h4>';
             } else {
                 echo '<h5>' . $title . '</h5>';
             }
+            if (!empty($link)) {
+                echo '</a>';
+            }
         }
 
-        $the_query = new WP_Query(array(
+        $the_query = new \WP_Query(array(
           'post_type'         => 'speaker',
         '  posts_per_page'    => -1
         ));
@@ -83,7 +89,7 @@ class SpeakerWidget extends \WP_Widget
                       <div class="speaker-link">
                           <a href="<?php the_permalink(); ?>"></a>
                       </div>
-                        <div class="speaker-image">
+                        <div class="archive-speaker-image">
                             <img src="<?php echo $image['url']; ?>" alt="<?php the_field('title'); ?>">
                         </div>
                         <div class="entry-content col speakers">
@@ -108,5 +114,5 @@ class SpeakerWidget extends \WP_Widget
 
 // register widget
 add_action('widgets_init', function () {
-    register_widget('Speaker\Widget\SpeakerWidget');
+    register_widget(__NAMESPACE__ . '\\SpeakerWidget');
 });
