@@ -87,15 +87,16 @@ class SpeakerWidget extends \WP_Widget
                   <article <?php post_class('container col'); ?>>
                     <div class="row">
                       <div class="speaker-link">
-                          <a href="<?php the_permalink(); ?>"></a>
+                          <a href="<?php the_permalink(); ?>"><span class="sr-only"><?php the_field('title'); ?></span></a>
                       </div>
-                        <div class="archive-speaker-image">
+                        <div class="archive-speaker-image accent background">
+                            <span class="speaker-view-more accent color inverse">View More</span>
                             <img src="<?php echo $image['url']; ?>" alt="<?php the_field('title'); ?>">
                         </div>
                         <div class="entry-content col speakers">
-                                <h2> <?php the_title(); ?></h2>
-                                <h3><?php echo $eventdate . ' ' . $session; ?></h3>
-                                <h4> <?php the_field('title'); ?></h4>
+                                <h4> <?php the_title(); ?></h4>
+                                <h5><?php echo $eventdate . ' ' . $session; ?></h5>
+                                <h6> <?php the_field('title'); ?></h6>
                             </header>
                         </div>
                       </div>

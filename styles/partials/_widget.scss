@@ -1,0 +1,31 @@
+.speaker-view-more {
+  display: none;
+  font-size: 1.7em;
+  left: 60px;
+  position: absolute;
+  top: 90px;
+}
+
+.speaker-link {
+  &:hover {
+    cursor: pointer;
+
+    ~ .archive-speaker-image {
+      border-radius: 100px;
+
+      img {
+        opacity: .2;
+      }
+
+      .speaker-view-more {
+        display: block;
+      }
+    }
+
+    ~ .speakers h2,
+    ~ .speakers h3,
+    ~ .speakers h4 {
+      text-decoration: underline;
+    }
+  }
+}

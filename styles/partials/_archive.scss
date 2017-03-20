@@ -17,23 +17,19 @@
   position: absolute;
   width: 100%;
   z-index: 10;
-
-  &:hover {
-    cursor: pointer;
-
-    ~ .archive-speaker-image {
-      border-radius: 100px;
-      opacity: .5;
-    }
-
-    ~ .speakers h2,
-    ~ .speakers h3,
-    ~ .speakers h4 {
-      text-decoration: underline;
-    }
-  }
 }
 
 .speakers {
   align-self: center;
+}
+
+@media (max-width: 991px) {
+  .type-speaker {
+    .speaker-link,
+    .archive-speaker-image,
+    .entry-content {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
 }
