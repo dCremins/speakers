@@ -44,14 +44,20 @@
     margin: 0 auto;
     text-align: center;
   }
+  .archive-speaker-image .speaker-view-more {
+    left: -10px;
+    width: 100%;
+  }
 }
 
 .speaker-view-more {
   display: none;
   font-size: 1.7em;
-  left: 60px;
+  left: 15px;
   position: absolute;
+  text-align: center;
   top: 90px;
+  width: 200px;
 }
 
 .speaker-link:hover {
