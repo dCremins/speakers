@@ -36,10 +36,11 @@
               <article <?php post_class('container col'); ?>>
                 <div class="row">
                   <div class="speaker-link">
-                      <a href="<?php the_permalink(); ?>"><span class="sr-only"><?php the_field('title'); ?></span></a>
-                  </div>
-                    <div class="archive-speaker-image accent background">
-                        <img src="<?php echo $image['url']; ?>" alt="<?php the_field('title'); ?>">
+                    <a href="<?php the_permalink(); ?>"><span class="sr-only">Link to biographical information for this speaker</span></a>
+                </div>
+                  <div class="archive-speaker-image accent background">
+                      <span class="speaker-view-more accent color inverse">View More</span>
+                      <img src="<?php echo $image['url']; ?>" alt="<?php echo get_the_title() . ' - ' . get_field('title'); ?>">
                     </div>
                     <div class="entry-content col speakers">
                             <h2> <?php the_title(); ?></h2>

@@ -22,7 +22,7 @@ while (have_posts()) :
         ?>
         <div class="row">
           <div class="speaker-image col-5">
-            <img src="<?php echo $image['url']; ?>" alt="<?php the_field('title'); ?>">
+          <img src="<?php echo $image['url']; ?>" alt="<?php echo get_the_title() . ' - ' . get_field('title'); ?>">
           </div>
           <div class="entry-content col">
             <header class="speakers">

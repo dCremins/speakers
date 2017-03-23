@@ -4,7 +4,7 @@ Plugin Name: ICOET Keynote Speakers
 GitHub Plugin URI: https://github.com/dcremins/speaker
 GitHub Branch:      master
 Description: Custom Keynote Speaker Post Type and Views for ICOET website use
-Version: 0.0.2
+Version: 0.0.3
 Author: Devin Cremins
 Author URI: http://octopusoddments.com
 */
