@@ -91,20 +91,21 @@ class SpeakerWidget extends \WP_Widget
                   <article <?php post_class('container col'); ?>>
                     <div class="row">
                       <div class="speaker-link">
-                          <a href="<?php the_permalink(); ?>"><span class="sr-only">Link to biographical information for this speaker</span></a>
+                          <a href="<?php the_permalink(); ?>">
+                            <span class="sr-only">Link to biographical information for this speaker</span>
+                          </a>
                       </div>
-                        <div class="archive-speaker-image accent background">
-                            <span class="speaker-view-more accent color inverse">View More</span>
-                            <img src="<?php echo $image['url']; ?>" alt="<?php echo get_the_title() . ' - ' . get_field('title'); ?>">
-                        </div>
-                        <div class="entry-content col speakers">
-                                <h4> <?php the_title(); ?></h4>
-                                <h5><?php echo $eventdate . ' ' . $session; ?></h5>
-                                <h6> <?php the_field('title'); ?></h6>
-                            </header>
-                        </div>
+                      <div class="archive-speaker-image accent background">
+                          <span class="speaker-view-more accent color inverse">View More</span>
+                          <img src="<?php echo $image['url']; ?>" alt="<?php echo get_the_title() . ' - ' . get_field('title'); ?>">
                       </div>
-                    </article>
+                      <div class="entry-content col speakers">
+                              <h4> <?php the_title(); ?></h4>
+                              <h5><?php echo $eventdate . ' ' . $session; ?></h5>
+                              <h6> <?php the_field('title'); ?></h6>
+                      </div>
+                    </div>
+                  </article>
         <?php
             endwhile; ?>
                 </div>
