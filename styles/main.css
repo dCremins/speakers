@@ -4,16 +4,19 @@
 }
 
 .speakers h2 {
-  margin: 0;
+  margin-bottom: .5em;
 }
 
-.speakers h3,
+.speakers h3 {
+  margin-bottom: 0;
+}
+
 .speakers h4 {
-  margin-bottom: 10px;
+  margin-bottom: .2em;
 }
 
 .type-speaker {
-  margin-bottom: 20px;
+  margin-bottom: 3em;
 }
 
 .type-speaker .archive-speaker-image {

@@ -43,8 +43,8 @@
                       <img src="<?php echo $image['url']; ?>" alt="<?php echo get_the_title() . ' - ' . get_field('title'); ?>">
                     </div>
                     <div class="entry-content col speakers">
-                            <h2> <?php the_title(); ?></h2>
-                            <h3><?php echo $eventdate . ' ' . $session; ?></h3>
+                            <h2><?php echo $eventdate . ' ' . $session; ?></h2>
+                            <h3><?php the_title(); ?></h3>
                             <h4> <?php the_field('title'); ?></h4>
                             <p><?php the_excerpt(); ?></p>
                     </div>

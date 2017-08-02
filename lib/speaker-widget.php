@@ -86,7 +86,7 @@ class SpeakerWidget extends \WP_Widget
                 $session = get_field('session_title');
                 $image = get_field('image');
                 $date = get_field('session');
-                $eventdate = date("l, M jS", strtotime($date));
+                $eventdate = date("l, M j", strtotime($date));
                 ?>
                   <article <?php post_class('container col'); ?>>
                     <div class="row">
@@ -100,8 +100,8 @@ class SpeakerWidget extends \WP_Widget
                           <img src="<?php echo $image['url']; ?>" alt="<?php echo get_the_title() . ' - ' . get_field('title'); ?>">
                       </div>
                       <div class="entry-content col speakers">
-                              <h4> <?php the_title(); ?></h4>
-                              <h5><?php echo $eventdate . ' ' . $session; ?></h5>
+                              <h4 style="font-weight: bold;"><?php echo $eventdate; ?></h4>
+                              <h5 style="font-weight: normal;"><?php the_title(); ?></h5>
                               <h6> <?php the_field('title'); ?></h6>
                       </div>
                     </div>
