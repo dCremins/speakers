@@ -1,5 +1,9 @@
 = CHANGELOG =
 
+= 1.0.0 =
+* Launch
+* Fixed Website Link
+
 = 0.1.0 =
 * Swap name and date so date/time is on the time and name is grouped with title
 * Adjust title spacing

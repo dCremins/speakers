@@ -29,7 +29,7 @@ while (have_posts()) :
              <h2 class="entry-title"><?php echo $eventdate . ' ' . $session; ?></h2>
              <h3><?php the_title(); ?></h3>
              <h4><?php the_field('title'); ?></h4>
-             <p> <a href="<?php the_field('title'); ?>">View Website</a></p>
+             <p> <a href="<?php the_field('website'); ?>">View Website</a></p>
            </header>
             <?php the_content(); ?>
           </div>
